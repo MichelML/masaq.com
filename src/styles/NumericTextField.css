@@ -1,0 +1,11 @@
+.filter-text-field {
+  display:inline-block;
+  position:relative;
+  margin-right:10px;
+  max-width:35%;
+}
+
+.price-interval-text {
+  margin-right:10px;
+} 
+

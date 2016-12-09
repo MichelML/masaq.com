@@ -42,3 +42,15 @@ body {
     margin-left: 0;
   }
 }
+
+
+.reset-top {
+  margin-top:0;
+  padding-top:0;
+}  
+
+.seperator {
+  width:95%;
+  margin:0 auto;
+  background-color:white;
+}

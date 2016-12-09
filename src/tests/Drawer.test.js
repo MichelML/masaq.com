@@ -6,9 +6,7 @@ import Main from '../components/Main';
 import FiltersMainTitle from '../components/FiltersMainTitle';
 import FiltersForm from '../components/FiltersForm';
 import Checkbox from '../components/Checkbox';
-/* eslint-disable */
-import PriceSlider from '../components/PriceSlider';
-/* eslint-enable */
+import NumericTextField from '../components/NumericTextField';
 
 
 describe('Drawer main title', () => {
@@ -44,8 +42,13 @@ describe('Filters form', () => {
         expect(shallow(<FiltersForm/>).find(Checkbox).at(2).is('#en-ligne-checkbox')).toBe(true);
       });
 
-      it('should contain a slider for price range', () => {
-        expect(shallow(<FiltersForm/>).find(PriceSlider).length).toBeGreaterThan(0);
+      it('should contains a NumericTextField for minimum price', () => {
+        expect(shallow(<FiltersForm/>).find(NumericTextField).at(0).is('#prix-minimum')).toBe(true);
+      });
+
+
+      it('should contains a NumericTextField for maximum price', () => {
+        expect(shallow(<FiltersForm/>).find(NumericTextField).at(1).is('#prix-maximum')).toBe(true);
       });
    });
 });
