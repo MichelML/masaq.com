@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "jasmine-enzyme": "^2.0.0"
+  }
+}

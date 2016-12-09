@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NavBar from './components/NavBar';
+import Main from './components/Main';
 import './styles/NavBar.css';
 import './index.css';
 
 ReactDOM.render( 
-  <div className="demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <NavBar/>
-  </div>,
+  <Main/>,
   document.getElementById('root')
 );

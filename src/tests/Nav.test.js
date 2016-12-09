@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar';
 import Navigation from '../components/Navigation';
 import HeaderTitle from '../components/HeaderTitle';
 import SearchBar from '../components/SearchBar';
+import Main from '../components/Main';
 
 
 describe('HeaderTitle', () => {
@@ -36,6 +37,10 @@ describe('Navbar', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<NavBar/>, div);
+  });
+
+  it('should be a child of Main', () => {
+    expect(shallow(<Main/>).find(NavBar).length).toBeGreaterThan(0); 
   });
 
   it('should contain a title', () => {
