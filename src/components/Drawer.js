@@ -6,7 +6,6 @@ class Drawer extends Component {
   render() {
     return (
         <aside className="mdl-layout__drawer mdl-color--pink-900">
-          <FiltersMainTitle/>
           <FiltersForm/>
         </aside>
     );

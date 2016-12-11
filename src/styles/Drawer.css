@@ -1,3 +1,8 @@
-.drawer-title {
-  text-decoration:underline;
+.mdl-layout__drawer {
+  width: 250px;
+  left: -250px;
+}
+
+.mdl-layout__drawer.is-visible {
+  left: 0;
 }

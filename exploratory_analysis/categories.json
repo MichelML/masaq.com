@@ -1,0 +1,309 @@
+{  
+   "Eaux-de-vie":[  
+      "Eaux-de-vie marc de bourgogne",
+      "Eaux-de-vie marc d\'aquitaine"
+   ],
+   "Eau-de-vie":[  
+      "Eau-de-vie de raisin",
+      "Eau-de-vie de fruit (prune)",
+      "Eau-de-vie de canne à sucre",
+      "Eau-de-vie de fruit (poire)",
+      "Eau-de-vie de marc",
+      "Eau-de-vie de fruit (framboise)",
+      "Eau-de-vie de pomme",
+      "Eau-de-vie aromatisée (coing)",
+      "Eau-de-vie aromatisée (abricot)",
+      "Eau-de-vie aromatisée",
+      "Eau-de-vie de fruit",
+      "Eau-de-vie de fruit (mirabelle)"
+   ],
+   "Whisky":[  
+      "Whisky",
+      "Whisky écossais",
+      "Whisky canadien"
+   ],
+   "Liqueur":[  
+      "Liqueur d\'herbe",
+      "Liqueur aromatisée (épices et miel)",
+      "Liqueur",
+      "Liqueur de fruit (cassis)",
+      "Liqueur de fruit (citron)",
+      "Liqueur de fruit (poire)",
+      "Liqueur de fruit",
+      "Liqueur de fruit (framboise)",
+      "Liqueur amère",
+      "Liqueur d\'anis",
+      "Liqueur d\'amande et noyau",
+      "Liqueur de fruit (framboise et cassis)",
+      "Liqueur de fruit (orange)",
+      "Liqueur de fruit (fraise)",
+      "Liqueur de café",
+      "Liqueur de chocolat",
+      "Liqueur d\'agrumes",
+      "Liqueur de fruit (cerise)",
+      "Liqueur de fruit (abricot)"
+   ],
+   "Grappa":[  
+      "Grappa"
+   ],
+   "Pisco":[  
+      "Pisco"
+   ],
+   "Vin":[  
+      "Vin de glace",
+      "Vin rosé",
+      "Vin rouge",
+      "Vin blanc",
+      "Vin de dessert",
+      "Vin mousseux",
+      "Vin apéritif",
+      "Vin mousseux rosé",
+      "Vin fortifié",
+      "Vin de fraises fortifié",
+      "Vin de bleuet",
+      "Vin à l\'érable",
+      "Vin de Rhubarbe",
+      "Vin de glace rouge",
+      "Vin mousseux rouge"
+   ],
+   "Vodka":[  
+      "Vodka",
+      "Vodka aromatisée (poire)",
+      "Vodka aromatisée (bleuet)",
+      "Vodka aromatisée (caramel)",
+      "Vodka aromatisée (chocolat)",
+      "Vodka aromatisée (érable)",
+      "Vodka aromatisée (pêche)",
+      "Vodka aromatisée",
+      "Vodka aromatisée (crème glacée)",
+      "Vodka aromatisée (pomme)"
+   ],
+   "Poire":[  
+
+   ],
+   "Maury":[  
+      "Maury"
+   ],
+   "noCategoryNames":[  
+      "Hardys Whiskers Blake Classic Tawny",
+      "Château de Myrat 2009",
+      "Alcootest jetable Alco-tube Plus",
+      "Château Climens 2012",
+      "Yalumba Museum Muscat",
+      "Verre à mesurer",
+      "Pompe Vacu Vin +1 bouchon",
+      "Union Libre Cidre de feu",
+      "Les Vergers Petit et Fils Cidre de feu",
+      "Le St-Laurent Cidre de feu",
+      "Mélangeur à cocktail en acier inoxydable",
+      "Yalumba Museum Muscat",
+      "Mélangeur à cocktail en acier inoxydable"
+   ],
+   "Rivesaltes":[  
+      "Rivesaltes"
+   ],
+   "Armagnac":[  
+      "Armagnac"
+   ],
+   "Brandy":[  
+      "Brandy",
+      "Brandy de pomme",
+      "Brandy de fruit (vanille)",
+      "Brandy de fruit (poire)",
+      "Brandy de fruit (framboise)",
+      "Brandy de fruit (miel)"
+   ],
+   "Cognac":[  
+      "Cognac"
+   ],
+   "Sauternes":[  
+      "Sauternes"
+   ],
+   "Rhum":[  
+      "Rhum agricole",
+      "Rhum blanc",
+      "Rhum brun",
+      "Rhum doré",
+      "Rhum épicé",
+      "Rhum ambré",
+      "Rhum aromatisé"
+   ],
+   "Absinthe":[  
+      "Absinthe"
+   ],
+   "Champagne":[  
+      "Champagne",
+      "Champagne rosé"
+   ],
+   "Dry":[  
+      "Dry gin",
+      "Dry gin aromatisé"
+   ],
+   "Téquila":[  
+      "Téquila dorée",
+      "Téquila"
+   ],
+   "Bière":[  
+      "Bière brune de type Ale",
+      "Bière dorée de type Lager",
+      "Bière blonde de type Ale",
+      "Bière blonde de type Lager",
+      "Bière rousse de type Lager",
+      "Bière noire de type Ale",
+      "Bière ambrée de type Ale",
+      "Bière",
+      "Bière noire de type Lager",
+      "Bière brune de type Lager",
+      "Bière blanche de type Ale",
+      "Bière rousse de type Ale"
+   ],
+   "Pineau":[  
+      "Pineau des Charentes rouge"
+   ],
+   "Calvados":[  
+      "Calvados",
+      "Calvados Pays d\'Auge"
+   ],
+   "Muscat":[  
+      "Muscat de Rivesaltes",
+      "Muscat de Samos",
+      "Muscat de Beaumes de Venise",
+      "Muscat de Limnos",
+      "Muscat de Frontignan",
+      "Muscat fortifié"
+   ],
+   "Montilla-Moriles":[  
+      "Montilla-Moriles"
+   ],
+   "Cidre":[  
+      "Cidre de glace",
+      "Cidre mousseux",
+      "Cidre mousseux rosé",
+      "Cidre apéritif",
+      "Cidre aromatisé (cassis)",
+      "Cidre fort",
+      "Cidre léger",
+      "Cidre de feu",
+      "Cidre aromatisé (framboise)",
+      "Cidre aromatisé (érable)",
+      "Cidre Pétillant",
+      "Cidre mousseux (framboise)",
+      "Cidre liquoreux"
+   ],
+   "Porto":[  
+      "Porto",
+      "Porto blanc"
+   ],
+   "Mistelle":[  
+      "Mistelle de pomme",
+      "Mistelle de (pomme et framboise)",
+      "Mistelle de raisin",
+      "Mistelle de pomme (sirop d\'érable)",
+      "Mistelle de (fraise)",
+      "Mistelle de (cerise de terre",
+      "Mistelle de (cerise de terre et citron)",
+      "Mistelle de (fraise et framboise)",
+      "Mistelle de (fraise et autres fruits)"
+   ],
+   "Apéritif":[  
+      "Apéritif à base de vin",
+      "Apéritif à base de gentiane",
+      "Apéritif à base d\'artichaut"
+   ],
+   "Banyuls":[  
+      "Banyuls"
+   ],
+   "Xérès":[  
+      "Xérès"
+   ],
+   "Vermouth":[  
+      "Vermouth blanc",
+      "Vermouth rouge",
+      "Vermouth de pomme"
+   ],
+   "Boisson":[  
+      "Boisson aux fruits (framboise)",
+      "Boisson aux fruits (fruit exotique)",
+      "Boisson alcoolisée (café)",
+      "Boisson aux fruits (cassis)",
+      "Boisson alcoolisée (noix de coco et menthe)",
+      "Boisson à l\'érable",
+      "Boisson aromatisée (fraise et framboise)",
+      "Boisson à la crème (crème irlandaise)",
+      "Boisson à la crème (fraise)",
+      "Boisson aromatisée (prune)",
+      "Boisson aux fruits (pomme)",
+      "Boisson aromatisée (mûre)",
+      "Boisson alcoolisée",
+      "Boisson aux fruits (petits fruits)",
+      "Boisson à la crème",
+      "Boisson à base de vodka et de fruit de la passion",
+      "Boisson à la crème (chocolat)",
+      "Boisson à la crème (caramel)",
+      "Boisson aux fruits (pommes et thé)",
+      "Boisson aux fruits (agrumes)",
+      "Boisson à l\'érable aromatisée au bleuet",
+      "Boisson à la crème (café)",
+      "Boisson à la crème (cannelle)"
+   ],
+   "Cooler":[  
+      "Cooler à base de téquila",
+      "Cooler au spiritueux",
+      "Cooler au vin",
+      "Cooler à base de vodka",
+      "Cooler à base de rhum"
+   ],
+   "Whiskey":[  
+      "Whiskey irlandais",
+      "Whiskey américain"
+   ],
+   "Cocktail":[  
+      "Cocktail au spiritueux",
+      "Cocktail au vin"
+   ],
+   "Sangria":[  
+      "Sangria"
+   ],
+   "Alcool":[  
+      "Alcool anisé - Arak",
+      "Alcool anisé - Ouzo",
+      "Alcool anisé - Pastis"
+   ],
+   "Ensemble":[  
+      "Ensemble de divers spiritueux"
+   ],
+   "Macvin":[  
+
+   ],
+   "Saké":[  
+      "Saké"
+   ],
+   "Madère":[  
+      "Madère"
+   ],
+   "Marsala":[  
+
+   ],
+   "Hydromel":[  
+      "Hydromel aromatisé (pomme)",
+      "Hydromel",
+      "Hydromel aromatisé (bleuet)",
+      "Hydromel aromatisé (sirop d\'érable et bleuet)",
+      "Hydromel aromatisé (chocolat et cassis)",
+      "Hydromel aromatisé (pétale de roses et mûre)",
+      "Hydromel fortifié",
+      "Hydromel mousseux",
+      "Hydromel aromatisé (malt)",
+      "Hydromel aromatisé (framboise)",
+      "Hydromel aromatisé (canneberge et pétale de roses)",
+      "Hydromel fortifié (whisky canadien)",
+      "Hydromel aromatisé (poire)",
+      "Hydromel aromatisé"
+   ],
+   "Moscatel":[  
+
+   ],
+   "Genièvre":[  
+
+   ]
+}
