@@ -1,0 +1,57 @@
+.mdl-card__media {
+  margin: 0;
+  text-align: center;
+  background: #fff;
+  border-bottom: solid 1px rgba(100, 100, 100, 0.2);
+}
+
+.mdl-card__media> img {
+  position: relative;
+  width: 30%;
+  max-width:30%;
+  height: 30%;
+  max-height:30%;
+  padding: 20px;
+}
+
+.mdl-card__actions {
+  display: flex;
+  box-sizing: border-box;
+  align-items: bottom;
+}
+
+.mdl-card__actions> .mdl-button--icon {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.item-price {
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+.item-price-normal {
+  font-size: 0.9em;
+  color: rgba(10,10,10,0.4);
+  text-decoration: line-through;
+}
+
+.mdl-card__title-text {
+  font-size: 1em;
+  font-weight: 900;
+  color: #424242;
+}
+
+.mdl-card__supporting-text {
+  margin:0;
+  padding-bottom:8px;
+  padding-top:8px;
+}
+
+.product-link {
+  font-size:1.05em;
+}
+
+.grower {
+  flex-grow:1;
+}

@@ -1,0 +1,30 @@
+.mdl-layout__drawer {
+  width: 250px;
+  left: -250px;
+}
+
+.mdl-layout__drawer.is-visible {
+  left: 0;
+}
+
+#reset-filters {
+  display:inline-block;
+  font-size:16px;
+  color:white;
+  margin-top:5px;
+  margin-bottom:10px;
+}
+
+#reset-filters:disabled {
+  color:grey;
+}
+
+.drawer-title {
+  display:inline-block;
+  padding-top:12px;
+}
+
+.text-left {
+  text-align:left;
+  margin:0;
+}

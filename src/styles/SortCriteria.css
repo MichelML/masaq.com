@@ -1,0 +1,13 @@
+.mdl-layout__tab.is-active {
+  background-color:rgb(136, 14, 85);
+  font-size:1em;
+}
+
+.mdl-layout__tab {
+  color:white !important;
+  font-size:0.7em;
+  max-width:33.3%;
+  min-width:33.3%;
+}
+
+

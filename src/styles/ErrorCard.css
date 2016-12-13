@@ -1,0 +1,28 @@
+.error-card.mdl-card {
+  background: #880E4F;
+  margin-left:10px;
+}
+.error-card > .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.error-card > .mdl-card__title {
+  align-items: flex-start;
+}
+.error-card > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+
+.error-card > .mdl-card__actions {
+  align-items: flex-start;
+}
+
+.error-card > .mdl-card__title,
+.error-card > .mdl-card__actions,
+.error-card > .mdl-card__actions > .mdl-button {
+  color: #fff;
+  text-align:left;
+}
+
+.error-card > .mdl-card__actions > .mdl-button {
+  width:100%;
+}

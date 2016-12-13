@@ -1,0 +1,9 @@
+#totaln-products {
+  font-size:1em;
+  margin: 10px 0 0 20px;
+  color:rgba(10,10,10,0.4);
+}
+
+#totaln-products-number {
+  text-decoration:underline;
+}

@@ -1,35 +1,104 @@
 import React, { Component } from 'react';
+import FilterCategory from './FilterCategory';
 import Checkbox from './Checkbox';
-import NumericTextField from './NumericTextField';
 
 class FiltersForm extends Component {
-  render() {
-    return (
-      <form id="filters" className="white-text">
-        <div className="mdl-grid" id="filters-generic">
-          <div className="mdl-cell mdl-cell--10-col underline-border">
-            <span className="filter-title">Critères Généraux</span>
-          </div>
-          <div className="mdl-cell mdl-cell--10-col">
-            <Checkbox description="En spécial" id="specials-checkbox"/>
-            <Checkbox description="En succursale" id="en-succursale-checkbox"/>
-            <Checkbox description="En ligne" id="en-ligne-checkbox"/>
-          </div>
-          <div className="mdl-cell mdl-cell--12-col no-margin-bottom">
-            <h6 className="filter-subtitle">Prix:</h6>
-            <NumericTextField description="minimum" id="prix-minimum"/>
-            <span className="price-interval-text">à</span>
-            <NumericTextField description="maximum" id="prix-maximum"/>
-          </div>
-        </div>
-        <div className="mdl-grid" id="filters-categories">
-          <div className="mdl-cell mdl-cell--10-col underline-border">
-            <span className="filter-title">Catégories</span>
-          </div>
-        </div>
-      </form>
-    );
-  };
-}
+    shouldCategoryRender = (rawCategory, rawCategoryName) => {
+      return rawCategory.field === rawCategoryName && rawCategory.values;
+    }
+
+    createCategoryObject(rawCategory, cleanCategoryName, rawCategoryName) {
+      return {
+        rawCategoryName: rawCategoryName,
+        categoryName: cleanCategoryName,
+        values: rawCategory.values
+      };
+    }
+
+    renderCategory(category) {
+      if (category) {
+        return (
+          <FilterCategory 
+            key={category.rawCategoryName} 
+            id={category.rawCategoryName}
+            categoryName={category.categoryName}
+            values={category.values}/>
+        );
+      }
+      return (null);
+    }
+
+    renderSpecials(category) {
+      if (category) {
+        return (
+          <fieldset className="mdl-grid" id={category.rawCategoryName}>
+            <legend className="hide-legend">{category.categoryName}</legend>
+            <div className="mdl-cell mdl-cell--10-col">
+              <Checkbox id={"enspecial"} description={category.categoryName} count={category.values[0].NumberOfResults}/>
+            </div>
+          </fieldset>
+        );
+      }
+      return (null);
+    }
+
+
+    render() {
+      const rawCategories = (this.props.groupByResults) ? this.props.groupByResults : [];
+      const possibleCategories = rawCategories.reduce((categories, category) => {
+        if (this.shouldCategoryRender(category, "tpenspecial")) {
+          categories["tpenspecial"] = this.createCategoryObject(category, "En spécial", "tpenspecial");
+          return categories;
+        } 
+        else if (this.shouldCategoryRender(category, "tpprixbande")) {
+          categories["tpprixbande"] = this.createCategoryObject(category, "Prix" ,"tpprixbande")
+          return categories;
+        } 
+        else if (this.shouldCategoryRender(category, "tpdisponibilite")) {
+          categories["tpdisponibilite"] = this.createCategoryObject(category, "Disponibilité" ,"tpdisponibilite")
+          return categories;
+        } 
+        else if (this.shouldCategoryRender(category, "tpformat")) {
+          categories["tpformat"] = this.createCategoryObject(category, "Format" ,"tpformat")
+          return categories;
+        } 
+        else if (this.shouldCategoryRender(category, "tpcategorie")) {
+          categories["tpcategorie"] = this.createCategoryObject(category, "Catégorie" ,"tpcategorie")
+          return categories;
+        } 
+        else if (this.shouldCategoryRender(category, "tppays")) {
+          categories["tppays"] = this.createCategoryObject(category, "Pays" ,"tppays")
+          return categories;
+        } 
+        else if (this.shouldCategoryRender(category, "tpregion")) {
+          categories["tpregion"] = this.createCategoryObject(category, "Région" ,"tpregion")
+          return categories;
+        } 
+        else if (this.shouldCategoryRender(category, "tppastilledegout")) {
+          categories["tppastilledegout"] = this.createCategoryObject(category, "Pastille de goût" ,"tppastilledegout")
+          return categories;
+        }
+        else if (this.shouldCategoryRender(category, "tpparticularitesplitgroup")) {
+          categories["tpparticularitesplitgroup"] = this.createCategoryObject(category, "Particularités" ,"tpparticularitesplitgroup")
+          return categories;
+        }
+        return categories;
+      }, {}); 
+
+      return (
+        <form id="filters" className="white-text">
+          {this.renderSpecials(possibleCategories["tpenspecial"])}
+          {this.renderCategory(possibleCategories["tpprixbande"])}
+          {this.renderCategory(possibleCategories["tpdisponibilite"])}
+          {this.renderCategory(possibleCategories["tpformat"])}
+          {this.renderCategory(possibleCategories["tpcategorie"])}
+          {this.renderCategory(possibleCategories["tppays"])}
+          {this.renderCategory(possibleCategories["tpregion"])}
+          {this.renderCategory(possibleCategories["tppastilledegout"])}
+          {this.renderCategory(possibleCategories["tpparticularitesplitgroup"])}
+        </form>
+      );
+    }
+};
 
 export default FiltersForm;

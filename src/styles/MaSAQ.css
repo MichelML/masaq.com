@@ -1,0 +1,77 @@
+html,
+body,
+mdl-layout__container {
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.content-grid {
+  min-width: 100%;
+  margin: 0 0 75px 0;
+  padding: 0;
+}
+
+.wine-bg {
+  background: #880e4f;
+}
+
+.white-bg {
+  background: #fff;
+}
+
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button,
+.mdl-layout__drawer {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .hide-mobile {
+    display: none;
+  }
+  #search-bar {
+    min-width: 200px;
+  }
+  .offset-search-bar {
+    margin-left: 0;
+  }
+}
+
+
+.reset-top {
+  margin-top:0;
+  padding-top:0;
+}  
+
+.seperator {
+  width:95%;
+  margin:0 auto;
+  background-color:white;
+}
+
+.no-margin-top {
+  margin-top:0;
+}
+
+.no-margin-bottom {
+  margin-bottom:0;
+}
+
+.underline-border {
+  border-bottom: 1px solid;
+  padding-bottom:3px;
+}
+
+.margin-bottom-5 {
+  margin-bottom:5px;
+}
+
+.hide {
+  display:none;
+}
