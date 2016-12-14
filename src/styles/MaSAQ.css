@@ -73,3 +73,17 @@ body {
 .hide {
   display:none;
 }
+
+.grower {
+  flex:1;
+}
+
+.footer-container {
+  min-width:100%;
+  background-color: #263238;
+  color:#616161;
+  font-size:0.8em;
+  padding:10px 10px 10px 20px;
+}
+
+

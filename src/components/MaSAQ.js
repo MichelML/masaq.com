@@ -87,6 +87,9 @@ class MaSAQ extends Component {
           <Aside groupByResults={currentAppState.groupByResults || []}/>
           <ProductsGrid products={currentAppState.products || []} 
                         numberOfResults={currentAppState.totalCount ? currentAppState.totalCount : 0} />
+          <div className="grower"></div>
+          <footer className="footer-container">
+            <span className="footer-text">maSAQ.com | Découvrez vos goûts</span>              </footer>
         </div>
       );
     }

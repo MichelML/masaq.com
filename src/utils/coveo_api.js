@@ -42,7 +42,7 @@ CoveoAPI.postRequestAuthorizationHeader = {
 };
 
 CoveoAPI.postRequestBodyFrame = {
-   "q": "vin rouge",
+   "q": "vin",
    "firstResult": 0,
    "numberOfResults": 96,
    "enableDidYouMean": true,

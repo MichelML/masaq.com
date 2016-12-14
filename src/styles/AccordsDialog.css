@@ -1,5 +1,6 @@
 .mdl-dialog__title {
-  line-height:40px;
+  line-height:20px;
+  font-size:1.3em;
   margin:0;
 }
 
