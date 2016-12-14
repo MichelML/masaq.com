@@ -11,9 +11,9 @@ const FilterCategory = (props) => {
           </div>
           <div className="mdl-cell mdl-cell--10-col">
             {values.map(criteria => {
-              const keyAndID = criteria.value.replace(/\W/g,'');
+              const keyAndID = criteria.value.replace(/\s/g,'');
               return (
-                <Checkbox key={keyAndID} id={keyAndID} description={criteria.value} count={criteria.NumberOfResults}/>
+                <Checkbox key={keyAndID} id={keyAndID} name={criteria.value} value={criteria.value} description={criteria.value} count={criteria.NumberOfResults}/>
               ) 
             })}
           </div>

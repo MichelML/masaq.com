@@ -16,7 +16,7 @@ const SearchBar = (props) => (
                   }>search</i>
               </label>
               <div className="mdl-textfield__expandable-holder">
-                <input className="mdl-textfield__input" placeholder="Chercher tous les produits"  type="text" id="search-bar" autoFocus autoComplete />
+                <input className="mdl-textfield__input" placeholder="Chercher tous les produits"  type="text" id="search-bar" autoFocus autoComplete/>
                 <label className="mdl-textfield__label" htmlFor="sample-expandable">Expandable Input</label>
               </div>
             </div>

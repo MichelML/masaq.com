@@ -11,7 +11,7 @@ const ProductsGrid = (props) => {
         )
       }
       return (
-        test.map((product) => {
+        props.products.map((product) => {
           return <ProductCard key={product.tpcodesaq} product={product}/>
         })
       );

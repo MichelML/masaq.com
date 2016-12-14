@@ -51,14 +51,15 @@
     "webpack": "1.13.2",
     "webpack-dev-server": "1.16.2",
     "webpack-manifest-plugin": "1.1.0",
-    "whatwg-fetch": "1.0.0",
     "xhr": "^2.3.1"
   },
   "dependencies": {
+    "jquery": "^3.1.1",
     "normalize.css": "^5.0.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-tap-event-plugin": "^2.0.1"
+    "react-tap-event-plugin": "^2.0.1",
+    "whatwg-fetch": "^2.0.1"
   },
   "scripts": {
     "start": "node scripts/start.js",

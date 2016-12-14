@@ -11,7 +11,7 @@ body {
 
 .content-grid {
   min-width: 100%;
-  margin: 0 0 75px 0;
+  margin:0;
   padding: 0;
 }
 
@@ -26,8 +26,6 @@ body {
 .demo-layout-transparent .mdl-layout__header,
 .demo-layout-transparent .mdl-layout__drawer-button,
 .mdl-layout__drawer {
-  /* This background is dark, so we set text to white. Use 87% black instead if
-     your background is light. */
   color: white;
 }
 

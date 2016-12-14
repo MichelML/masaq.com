@@ -34,14 +34,16 @@ class FiltersForm extends Component {
           <fieldset className="mdl-grid" id={category.rawCategoryName}>
             <legend className="hide-legend">{category.categoryName}</legend>
             <div className="mdl-cell mdl-cell--10-col">
-              <Checkbox id={"enspecial"} description={category.categoryName} count={category.values[0].NumberOfResults}/>
+              <Checkbox id={"enspecial"} 
+                        description={category.categoryName} 
+                        checkBoxValue={category.categoryName} 
+                        count={category.values[0].NumberOfResults}/>
             </div>
           </fieldset>
         );
       }
       return (null);
     }
-
 
     render() {
       const rawCategories = (this.props.groupByResults) ? this.props.groupByResults : [];

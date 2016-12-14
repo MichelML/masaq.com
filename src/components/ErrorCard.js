@@ -11,13 +11,19 @@ const ErrorCard = (props) => {
           </div>
           <div className="mdl-card__actions mdl-card--border">
             <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Nouvelle recherche
+            </a>
+            <br/>
+          </div>
+          <div className="mdl-card__actions mdl-card--border">
+            <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
               Accéder aux filtres
             </a>
             <br/>
           </div>
           <div className="mdl-card__actions mdl-card--border">
             <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-              Voir les spéciaux courants
+              Voir spéciaux courants
             </a>
             <br/>
           </div>
