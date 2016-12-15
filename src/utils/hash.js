@@ -32,7 +32,7 @@ Hash.setNewHash = (e) => {
         }
       });
 
-      return `aq=${window.encodeURIComponent(aQ.trim())}!!` || "";
+      return ((aQ.trim()) ? `aq=${window.encodeURIComponent(aQ.trim())}!!` : "");
     })();
 
     const sortCriteria = (() => {

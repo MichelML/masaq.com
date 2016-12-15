@@ -2,7 +2,7 @@ import React from 'react';
 import Hash from '../utils/hash.js';
 
 const SearchBar = (props) => (
-          <form className="offset-search-bar">
+          <form className="offset-search-bar" onsubmit={(e) => {e.preventDefault();return false;}}>
             <div className="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
               <label className="mdl-button mdl-js-button mdl-button--icon" htmlFor="sample6">
                  <i className="material-icons" onClick={
