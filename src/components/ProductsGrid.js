@@ -1,6 +1,5 @@
 import React from 'react';
 import Hash from '../utils/hash.js';
-import SAQ from '../utils/saq.js';
 import ProductCard from './ProductCard';
 import ErrorCard from './ErrorCard';
 
