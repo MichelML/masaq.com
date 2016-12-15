@@ -51,3 +51,12 @@
 .product-link {
   font-size:1.05em;
 }
+
+@media screen and (max-width: 600px) {
+  .mdl-card__media> img {
+    width: 60px;
+    max-width:60px;
+    height: 100px;
+    max-height:100px;
+  }
+}

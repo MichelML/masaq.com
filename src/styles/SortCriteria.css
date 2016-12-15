@@ -1,12 +1,17 @@
 .mdl-layout__tab.is-active {
-  background-color:rgb(136, 14, 85);
+  background-color:rgb(136, 14, 115);
 }
 
 .mdl-layout__tab {
   color:white !important;
   font-size:0.7em;
-  max-width:33.3%;
-  min-width:33.3%;
+  max-width:50%;
+  min-width:50%;
 }
 
-
+.tab-icon {
+  display:inline-block;
+  max-width:10px;
+  max-height:10px;
+  font-size:1.4em;
+}

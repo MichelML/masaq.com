@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MaterialButton from './MaterialButton';
 import Chip from './Chip';
 import AccordsDialog from './AccordsDialog';
 
@@ -25,7 +24,6 @@ class ProductCard extends Component {
     }
     
     showDialog() {
-      console.log(this.dialogID);
       document.querySelector('#' + this.dialogID).showModal();
     }
 

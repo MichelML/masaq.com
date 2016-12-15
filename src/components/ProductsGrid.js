@@ -1,4 +1,5 @@
 import React from 'react';
+import Hash from '../utils/hash.js';
 import ProductCard from './ProductCard';
 import ErrorCard from './ErrorCard';
 
@@ -19,15 +20,26 @@ const ProductsGrid = (props) => {
 
 
     return (
-      <main className="mdl-layout__content content-grid wrapper">
+      <main id="products-grid" className="mdl-layout__content content-grid wrapper">
         <h6 id="totaln-products">
           Nombre de produits trouvés:&nbsp; 
           <span id="totaln-products-number">
             {props.numberOfResults}
           </span>
         </h6>
+        <h6 id="did-you-mean" className="hide">
+          Essayer plutôt:  
+          <a id="did-you-mean-link" onClick={(e) => {
+            document.getElementById('search-bar').value = e.target.innerHTML;
+            Hash.setNewHash(e);
+          }}>
+            {props.didYouMean}
+          </a>
+        </h6>
         <div className="mdl-grid">
           {gridContent} 
+        </div>
+        <div id="loading">
         </div>
       </main>
     );

@@ -33,11 +33,15 @@ class FiltersForm extends Component {
         return (
           <fieldset className="mdl-grid" id={category.rawCategoryName}>
             <legend className="hide-legend">{category.categoryName}</legend>
+            <div className="mdl-cell mdl-cell--10-col underline-border">
+              <span className="filter-title">{category.categoryName}</span>
+            </div>
             <div className="mdl-cell mdl-cell--10-col">
               <Checkbox id={"enspecial"} 
                         description={category.categoryName} 
-                        checkBoxValue={category.categoryName} 
-                        count={category.values[0].NumberOfResults}/>
+                        value={category.categoryName} 
+                        count={category.values[0].NumberOfResults}
+                        name={category.categoryName}/>
             </div>
           </fieldset>
         );
@@ -50,10 +54,6 @@ class FiltersForm extends Component {
       const possibleCategories = rawCategories.reduce((categories, category) => {
         if (this.shouldCategoryRender(category, "tpenspecial")) {
           categories["tpenspecial"] = this.createCategoryObject(category, "En spécial", "tpenspecial");
-          return categories;
-        } 
-        else if (this.shouldCategoryRender(category, "tpprixbande")) {
-          categories["tpprixbande"] = this.createCategoryObject(category, "Prix" ,"tpprixbande")
           return categories;
         } 
         else if (this.shouldCategoryRender(category, "tpdisponibilite")) {
@@ -90,7 +90,6 @@ class FiltersForm extends Component {
       return (
         <form id="filters" className="white-text">
           {this.renderSpecials(possibleCategories["tpenspecial"])}
-          {this.renderCategory(possibleCategories["tpprixbande"])}
           {this.renderCategory(possibleCategories["tpdisponibilite"])}
           {this.renderCategory(possibleCategories["tpformat"])}
           {this.renderCategory(possibleCategories["tpcategorie"])}

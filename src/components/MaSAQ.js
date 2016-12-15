@@ -13,29 +13,35 @@ class MaSAQ extends Component {
        history: [{groupByResults:[],products:[],totalCount:0, hash:"#"}]
       }
     }
-    updateComponent(component) {
+    updateComponent() {
+      const self = this;
+      $('#filters').prop('disabled', true);
+      $('#did-you-mean').addClass('hide');
+      $('#loading').show();
       $.ajax(CoveoAPI.apiURL, {
           method: 'POST',
           headers: CoveoAPI.postRequestAuthorizationHeader,
           contentType:'application/json',
-          data: JSON.stringify(CoveoAPI.postRequestBodyFrame)
+          data: JSON.stringify(Object.assign({},CoveoAPI.postRequestBodyFrame, Hash.parseNewHash(window.location.hash)))
         })
         .then(response => { 
-          component.setState({
-            history: component.state.history.concat([{
+          self.setState({
+            history: self.state.history.concat([{
               groupByResults: response.groupByResults,
               products: response.results.map(result => result.raw),
               totalCount: response.totalCount,
+              didYouMean: response.queryCorrections.length ? response.queryCorrections[0].correctedQuery : "",
               hash: window.location.hash
             }])
           });
         })
         .catch((e) => { 
-          component.setState({
-            history: component.state.history.concat([{
+          console.log(e);
+          self.setState({
+            history: self.state.history.concat([{
               groupByResults: [],
               products: [],
-              totalCount: [],
+              totalCount: 0,
               hash: window.location.hash,
               error: e
             }])
@@ -43,9 +49,15 @@ class MaSAQ extends Component {
         })
         .done(() => {
           window.componentHandler.upgradeDom();
+          if (self.state.history[self.state.history.length-1].didYouMean)  {
+            $('#did-you-mean').removeClass('hide');
+          }
+          $('#loading').hide();
         })
     }
     render() {
+      const updateComponentWithHash = this.updateComponent.bind(this);
+      Hash.initListener(updateComponentWithHash);
       if (this.state.history.length === 1) {
         window.location.hash = "";
         $.ajax(CoveoAPI.apiURL, {
@@ -77,20 +89,25 @@ class MaSAQ extends Component {
         })
         .done(() => {
           window.componentHandler.upgradeDom();
+          $('#loading').hide();
         })
       }
-      Hash.initListener(() => {this.updateComponent(this)});
+
       const currentAppState = this.state.history[this.state.history.length-1];
       return (
         <div className="demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
           <Header/>
           <Aside groupByResults={currentAppState.groupByResults || []}/>
           <ProductsGrid products={currentAppState.products || []} 
-                        numberOfResults={currentAppState.totalCount ? currentAppState.totalCount : 0} />
+                        numberOfResults={currentAppState.totalCount ? currentAppState.totalCount : 0}
+                        didYouMean={currentAppState.didYouMean}/>
           <div className="grower"></div>
           <footer className="footer-container">
-            <span className="footer-text">maSAQ.com | Découvrez vos goûts</span>              </footer>
+            <span className="footer-text">maSAQ.com | Découvrez vos goûts
+            </span>              
+          </footer>
         </div>
+
       );
     }
 } 

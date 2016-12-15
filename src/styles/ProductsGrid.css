@@ -1,4 +1,4 @@
-#totaln-products {
+#totaln-products, #did-you-mean {
   font-size:1em;
   margin: 10px 0 0 20px;
   color:rgba(10,10,10,0.4);
@@ -6,4 +6,26 @@
 
 #totaln-products-number {
   text-decoration:underline;
+}
+
+#products-grid {
+  position:relative;
+  z-index:1;
+}
+
+#loading {
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1000;
+  width:100%;
+  min-width:100%;
+  min-height:100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#loading-spinner {
+    height: 300px;
+    top: 50%;
+    margin-top: -50px;
 }

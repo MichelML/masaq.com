@@ -14,7 +14,7 @@ class Header extends Component {
             <SearchBar/>
           </nav>
         </div>
-        <SortSection sortCriteriaList={[{name:"Alphabétique"},{name:"Pertinence", isActive:true}, {name:"Prix"}, ]}/>
+        <SortSection sortCriteriaList={[{name:"Pertinence", isActive:true}, {name:"Prix"}, ]}/>
       </header>
     );
   }

@@ -13,12 +13,14 @@ CoveoAPI.fieldsIncluded = [
   "tpprixrabais",
   "tpprixinitial",
   "tpprixnormal",
+  "tpprixnum",
   "systitle",
   "tpformat",
   "tpenspecial",
   "tppays",
   "tpcepagesplitgroup",
   "tpcepagenomsplitgroup",
+  "tpmillesime",
   "tpparticularite",
   "tpparticularitesplitgroup"
 ];
@@ -42,7 +44,10 @@ CoveoAPI.postRequestAuthorizationHeader = {
 };
 
 CoveoAPI.postRequestBodyFrame = {
-   "q": "vin",
+   "q": "",
+   "dq": "@tpenspecial==(true)",
+   "partialMatch": true,
+   "partialMatchKeyWords": 0,
    "firstResult": 0,
    "numberOfResults": 96,
    "enableDidYouMean": true,
@@ -50,7 +55,7 @@ CoveoAPI.postRequestBodyFrame = {
    "groupBy": [
       {
          "field": "@tpcategorie",
-         "maximumNumberOfValues": 12,
+         "maximumNumberOfValues": 200,
          "sortCriteria": "occurences",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
@@ -71,52 +76,53 @@ CoveoAPI.postRequestBodyFrame = {
       },
       {
          "field": "@tpformat",
-         "maximumNumberOfValues": 12,
+         "maximumNumberOfValues": 24,
          "sortCriteria": "occurences",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
       {
          "field": "@tpparticularitesplitgroup",
-         "maximumNumberOfValues": 12,
+         "maximumNumberOfValues": 24,
          "sortCriteria": "occurences",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
       {
          "field": "@tppastilledegout",
-         "maximumNumberOfValues": 12,
+         "maximumNumberOfValues": 50,
          "sortCriteria": "occurences",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
       {
          "field": "@tppays",
-         "maximumNumberOfValues": 12,
-         "sortCriteria": "occurences",
-         "injectionDepth": 1000,
-         "completeFacetWithStandardValues": true
-      },
-      {
-         "field": "@tpprixbande",
-         "maximumNumberOfValues": 12,
+         "maximumNumberOfValues": 50,
          "sortCriteria": "occurences",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
       {
          "field": "@tpregion",
-         "maximumNumberOfValues": 12,
+         "maximumNumberOfValues": 50,
+         "sortCriteria": "occurences",
+         "injectionDepth": 1000,
+         "completeFacetWithStandardValues": true
+      },
+      {
+         "field": "@tpmillesime",
+         "maximumNumberOfValues": 100,
          "sortCriteria": "occurences",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       }
+
    ],
    "timezone": "America/Montreal",
    "retrieveFirstSentences": true,
    "debug": false,
    "fieldsToInclude": CoveoAPI.fieldsIncluded,
-   "enableDuplicateFiltering": false,
+   "enableDuplicateFiltering": true,
    "enableCollaborativeRating": false
 };
 
