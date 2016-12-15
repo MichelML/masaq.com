@@ -16,7 +16,6 @@ class MaSAQ extends Component {
     updateComponent() {
       const self = this;
       const hash = Hash.parseNewHash(window.location.hash);
-      const firstResultTest = hash['firstResult'] || 0;
       const currentState = self.state.history[self.state.history.length-1];
       let firstResult;
 
