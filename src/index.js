@@ -1,3 +1,5 @@
+import './utils/dialog-polyfill.js';
+import './styles/dialog-polyfill.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MaSAQ from './components/MaSAQ';
@@ -15,7 +17,6 @@ import './styles/ErrorCard.css';
 import './styles/AccordsDialog.css';
 import './styles/MaterialButton.css';
 import './styles/Chip.css';
-
 
 ReactDOM.render( 
   <MaSAQ/>,

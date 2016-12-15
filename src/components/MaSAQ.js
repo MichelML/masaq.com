@@ -107,6 +107,11 @@ class MaSAQ extends Component {
             <span className="footer-text">maSAQ.com | Découvrez vos goûts
             </span>              
           </footer>
+          <button id="to-top" className="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onClick={() => {
+            $('#products-grid').scrollTop(0);
+          }}>
+            <i className="material-icons">keyboard_arrow_up</i>
+          </button>
         </div>
 
       );

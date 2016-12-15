@@ -24,7 +24,11 @@ class ProductCard extends Component {
     }
     
     showDialog() {
-      document.querySelector('#' + this.dialogID).showModal();
+      let dialog = document.querySelector('#' + this.dialogID);
+      if (! dialog.showModal) {
+        window.dialogPolyfill.registerDialog(dialog);
+      }
+      dialog.show();
     }
 
     closeDialog(id) {
@@ -78,12 +82,12 @@ class ProductCard extends Component {
                       disabled={this.props.product.tpaccordsnommenu ? false : true}>
                 <i className="material-icons">restaurant</i>
               </button>
-              <AccordsDialog closeDialog={this.closeDialog.bind(this)} 
-                              id={this.dialogID} 
-                              accords={this.props.product.tpaccordsnommenu} 
-                              tpCodeSAQ={this.props.product.tpcodesaq} 
-                              productName={this.props.product.systitle}/>
             </div>
+            <AccordsDialog closeDialog={this.closeDialog.bind(this)} 
+                            id={this.dialogID} 
+                            accords={this.props.product.tpaccordsnommenu} 
+                            tpCodeSAQ={this.props.product.tpcodesaq} 
+                            productName={this.props.product.systitle}/>
           </div>
       );
     }

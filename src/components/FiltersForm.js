@@ -80,6 +80,10 @@ class FiltersForm extends Component {
           categories["tppastilledegout"] = this.createCategoryObject(category, "Pastille de goût" ,"tppastilledegout")
           return categories;
         }
+        else if (this.shouldCategoryRender(category, "tpmillesime")) {
+          categories["tpmillesime"] = this.createCategoryObject(category, "Millésime" ,"tpmillesime")
+          return categories;
+        }
         else if (this.shouldCategoryRender(category, "tpparticularitesplitgroup")) {
           categories["tpparticularitesplitgroup"] = this.createCategoryObject(category, "Particularités" ,"tpparticularitesplitgroup")
           return categories;
@@ -97,6 +101,7 @@ class FiltersForm extends Component {
           {this.renderCategory(possibleCategories["tpregion"])}
           {this.renderCategory(possibleCategories["tppastilledegout"])}
           {this.renderCategory(possibleCategories["tpparticularitesplitgroup"])}
+          {this.renderCategory(possibleCategories["tpmillesime"])}
         </form>
       );
     }

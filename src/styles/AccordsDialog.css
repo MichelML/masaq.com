@@ -1,11 +1,20 @@
 .mdl-dialog__title {
   line-height:20px;
-  font-size:1.3em;
+  font-size:1.1em;
   margin:0;
 }
 
+.mdl-dialog__content,
 .mdl-dialog__content > .mdl-list,
- .mdl-dialog__content > .mdl-list > .mdl-list__item {
-  padding:0;
+.mdl-dialog__content .mdl-list__item {
+  padding-top:0;
+  padding-bottom:0;
+  padding-left:8px;
   margin:0;
+  font-size:0.9em;
+}
+
+.mdl-dialog__content .mdl-list__item {
+  min-height:40px;
+  max-height:40px; 
 }

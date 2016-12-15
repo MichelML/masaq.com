@@ -13,7 +13,7 @@ const AccordsDialog = (props) => {
              </li>
     );
     return (
-        <dialog className="mdl-dialog" id={props.id}>
+        <dialog className="mdl-dialog fixed" id={props.id}>
           <h6 className="mdl-dialog__title">{props.productName}</h6>
           <h6 className="mdl-dialog__title mdl-color-text--pink-900 no-border"><small>accords</small></h6>
           <div className="mdl-dialog__content">
