@@ -49,7 +49,7 @@ CoveoAPI.postRequestBodyFrame = {
    "partialMatch": true,
    "partialMatchKeyWords": 0,
    "firstResult": 0,
-   "numberOfResults": 96,
+   "numberOfResults": 24,
    "enableDidYouMean": true,
    "sortCriteria": "Relevancy",
    "groupBy": [
