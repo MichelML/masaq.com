@@ -60,6 +60,7 @@ Hash.setNewHash = (e) => {
 
 Hash.parseNewHash = (hash) => {
   if (!hash) {
+    Hash.resetAppValues({});
     return {};
   }
 
@@ -80,10 +81,39 @@ Hash.parseNewHash = (hash) => {
     return queryUpdates;
   }, {});
   
+  Hash.resetAppValues(parsedHash);
+
   if (parsedHash['aq']) {
     parsedHash['aq'] = parsedHash['aq'].replace("En spécial", "true");
   }
   return parsedHash;
+}
+
+Hash.resetAppValues = (parsedHash) => {
+  // reset values only for sort tabs and search bar
+  // filters always stay as they currently are to avoid
+  // cognitive overload
+  const sortCriteria = parsedHash["sortCriteria"] || "relevancy";
+  const q = parsedHash["q"] || "";
+
+  let $sortTabs = $('.mdl-layout__tab');
+  let $activeTab;
+  $sortTabs.removeClass('is-active mdl-shadow--4dp');
+  if (sortCriteria === "relevancy") {
+    $('#Pertinence').addClass('is-active mdl-shadow--4dp');    
+  } 
+  else if (sortCriteria === "@tpprixnum ascending") {
+    $activeTab = $('#Prix');
+    $activeTab.addClass('is-active mdl-shadow--4dp');    
+    $activeTab.find('.tab-icon').text('keyboard_arrow_up');    
+  } else {
+    $activeTab = $('#Prix');
+    $activeTab.addClass('is-active mdl-shadow--4dp');
+    $activeTab.find('.tab-icon').text('keyboard_arrow_down');    
+  }
+
+  $('#search-bar').val(q);
+
 }
 
 export default Hash;
