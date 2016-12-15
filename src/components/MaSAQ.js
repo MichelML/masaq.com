@@ -15,9 +15,22 @@ class MaSAQ extends Component {
     }
     updateComponent() {
       const self = this;
-      $('#filters').prop('disabled', true);
-      $('#did-you-mean').addClass('hide');
+      const hash = Hash.parseNewHash(window.location.hash);
+      const firstResultTest = hash['firstResult'] || 0;
+      const currentState = self.state.history[self.state.history.length-1];
+      let firstResult;
+
       $('#loading').show();
+
+      if (hash['firstResult'] && currentState.products.length > firstResult) {
+          $('#loading').hide();
+          return null; 
+      }
+      else if (!hash["firstResult"]) {
+         hash['firstResult'] = 0;
+      } 
+
+      $('#did-you-mean').addClass('hide');
       $.ajax(CoveoAPI.apiURL, {
           method: 'POST',
           headers: CoveoAPI.postRequestAuthorizationHeader,
@@ -25,11 +38,12 @@ class MaSAQ extends Component {
           data: JSON.stringify(Object.assign({},CoveoAPI.postRequestBodyFrame, Hash.parseNewHash(window.location.hash)))
         })
         .then(response => { 
+          let products = response.results.map(result => result.raw);
           self.setState({
             history: self.state.history.concat([{
               groupByResults: response.groupByResults,
-              products: response.results.map(result => result.raw),
-              totalCount: response.totalCount,
+              products: (hash['firstResult']) ? currentState.products.concat(products) : products,
+              totalCount: (hash['firstResult']) ? currentState.totalCount : response.totalCount,
               didYouMean: response.queryCorrections.length ? response.queryCorrections[0].correctedQuery : "",
               hash: window.location.hash
             }])
@@ -53,7 +67,10 @@ class MaSAQ extends Component {
             $('#did-you-mean').removeClass('hide');
           }
           $('#loading').hide();
-          $('#products-grid').scrollTop(0);
+
+          if (!hash["firstResult"]) {
+            $('#products-grid').scrollTop(0);
+          }
         })
     }
     render() {

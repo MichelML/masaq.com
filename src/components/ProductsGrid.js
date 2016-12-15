@@ -1,5 +1,6 @@
 import React from 'react';
 import Hash from '../utils/hash.js';
+import SAQ from '../utils/saq.js';
 import ProductCard from './ProductCard';
 import ErrorCard from './ErrorCard';
 
@@ -39,6 +40,9 @@ const ProductsGrid = (props) => {
         <div className="mdl-grid">
           {gridContent} 
         </div>
+        <button id="more-results" className="mdl-button mdl-js-button mdl-button--raised" onClick={Hash.setNewHash}>
+          PLUS DE RÉSULTATS
+        </button>
         <div id="loading">
         </div>
       </main>

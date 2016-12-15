@@ -29,3 +29,9 @@
     top: 50%;
     margin-top: -50px;
 }
+
+#more-results {
+  display:block;
+  width:100%;
+  min-width:100%;
+}

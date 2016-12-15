@@ -38,7 +38,7 @@ class ProductCard extends Component {
     render() {
       const cepage = this.props.product.tpcepagenomsplitgroup ? this.props.product.tpcepagenomsplitgroup.split(';') : false;
       return (
-          <div className="mdl-card mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-shadow--4dp">
+          <div className="mdl-card mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-shadow--4dp product-card">
             <figure className="mdl-card__media">
               <img src={this.props.product.tpthumbnailuri} alt={this.props.product.systitle} />
             </figure>

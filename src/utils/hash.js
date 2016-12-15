@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import SAQ from './saq.js';
 const Hash = {};
 
 Hash.initListener = (callback) => {
@@ -35,12 +36,12 @@ Hash.setNewHash = (e) => {
       return ((aQ.trim()) ? `aq=${window.encodeURIComponent(aQ.trim())}!!` : "");
     })();
 
-    const sortCriteria = (() => {
+    let sortCriteria = (() => {
       const $activeTab = $('.mdl-layout__tab.is-active')
       let sortCriteria;
 
       if ($activeTab.length < 1 || $activeTab.text() === "Pertinence") {
-        return "sortCriteria=relevancy";
+        return "sortCriteria=relevancy!!";
       } 
       else {
         if (/arrow_up/.test($activeTab.text())) {
@@ -50,11 +51,20 @@ Hash.setNewHash = (e) => {
         }
       }
       
-      return `sortCriteria=${sortCriteria}`
+      return `sortCriteria=${sortCriteria}!!`
     })();
 
-    let newHash = `${q}${aq}${sortCriteria}`;
-    window.location.hash = newHash.replace(/(!!)$/g, "");
+    let firstResult = (() => {
+      if (SAQ.getNumberOfResults() && e.target.id === "more-results") {
+         return `firstResult=${SAQ.getNumberOfResults()}`;
+      }
+      return "";
+    })();
+
+
+    let newHash = `${q}${aq}${sortCriteria}${firstResult}`;
+    newHash.replace(/(!!)$/g, "");
+    window.location.hash = newHash;
   }
 }
 
@@ -86,6 +96,7 @@ Hash.parseNewHash = (hash) => {
   if (parsedHash['aq']) {
     parsedHash['aq'] = parsedHash['aq'].replace("En spécial", "true");
   }
+
   return parsedHash;
 }
 
