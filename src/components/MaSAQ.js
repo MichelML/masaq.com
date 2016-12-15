@@ -53,6 +53,7 @@ class MaSAQ extends Component {
             $('#did-you-mean').removeClass('hide');
           }
           $('#loading').hide();
+          $('#products-grid').scrollTop(0);
         })
     }
     render() {
