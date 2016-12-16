@@ -44,7 +44,7 @@ User checks/unchecks a filter -> ...(same sequence)... ->
 User resets filters -> ...(same sequence)... ->
 ```   
 ``` 
-User clicks on a new sort criteria -> ...(same sequence) ->
+User clicks on a new sort criteria -> ...(same sequence)... ->
 ```  
 ``` 
 User clicks on load more results button -> ...(same sequence)... ->
