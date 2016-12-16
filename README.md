@@ -8,10 +8,10 @@
 
 <a href="#synopsis">Synopsis</a><br>
 <a href="#strategy">Strategy</a><br>
---<a href="#core-strategy">core strategy</a><br>
---<a href="#using-react">on using React</a><br>
+-<a href="#core-strategy">core strategy</a><br>
+-<a href="#using-react">on using React</a><br>
 <a href="#installation">Installation</a><br>
-<a href="#overview">Overview</a><br>
+<a href="#development">Development</a><br>
 <a href="#edit">Edit application</a><br>
 <a href="#documentation">Documentation</a><br>
 <a href="#contribute">Contribute</a><br>
@@ -88,7 +88,7 @@ Each component is named as presented in the schema in the project folder at `_ro
 
 <h1 id="installation">Installation</h1>
 
-<h1 id="edit">Edit application</h1>
+<h1 id="development">Development</h1>
 
 
 # Technology stack    
@@ -117,7 +117,7 @@ As of the last edit of this README, *maSAQ.com* is mostly supported by the follo
 
 
 #### API  
-* [Coveo API](https://github.com/coveo/frontend-coding-challenge#documentation) - Searching and getting relevant SAQ products
+* [Coveo API](https://developers.coveo.com/display/public/SearchREST/REST+Search+API+Home;jsessionid=1B209A1E53E98FE88DDF375C76FB6CD9) - Searching and getting relevant SAQ products
 
 #### Utilities
 * [createcomp](https://www.npmjs.com/package/createcomp) - a node script I personally coded to manage the creation of a react component along with its stylesheet and test file when working on components. This should be updated to provide delete and rename functionalities in the future.
