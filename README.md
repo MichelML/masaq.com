@@ -87,6 +87,30 @@ When indicated as __currently not a component__, this means you won't find the a
 Each component is named as presented in the schema in the project folder at `_root_/src/components`. Each component possesses its own stylesheet with the same name at `_root_/src/styles`, and its own test file with the same name at `_root_/src/tests`. It may however be possible that the styles of parent elements may be used in their children. If you do not find a rule you want to editin the component's style, you may want to climb up the component tree to find which component is containing the rule. As a rule of thumb, some utility rules (hide, show components) can be found at the root component `MaSAQ`.
 
 <h1 id="installation">Installation</h1>
+#### Step 1: Prerequisites
+First, make sure you have the following installed on your computeR: [Node.js](https://nodejs.org/en/), [Npm](https://www.npmjs.com/), and [Git](https://git-scm.com/).   
+
+
+#### Step 2: Clone the github repository
+
+Move to an empty directory on your computer and clone the github repository with the following command:  
+
+```  
+git clone https://github.com/MichelML/masaq.com.git
+```  
+After this command is executed,  move to the local directory created with the following command:  
+
+```  
+cd masaq.com  
+```  
+
+#### Step 3: Install node dependencies
+To install all the node modules dependencies for the project, run the following command on your computer:  
+
+```
+npm install  
+```  
+This could take a few minutes or less. You are now ready to edit the application.
 
 <h1 id="development">Development</h1>
 
@@ -104,7 +128,8 @@ As of the last edit of this README, *maSAQ.com* is mostly supported by the follo
   
 #### Development   
 * [Create react app](https://github.com/facebookincubator/create-react-app) - Create React apps with no build configuration
-* [Webpack](https://webpack.github.io/docs/) - module bundler     
+* [Webpack](https://webpack.github.io/docs/) with webpack-dev-server, html-webpack-plugin and style-loader - module bundler     
+* [Autoprefixer](https://github.com/postcss/autoprefixer) - Parse CSS and add vendor prefixes to rules
 * [Babel](https://babeljs.io/) - Use next generation JavaScript, today
 * [Eslint](http://eslint.org/) - pluggable linting utility for JavaScript and JSX
 
@@ -121,9 +146,6 @@ As of the last edit of this README, *maSAQ.com* is mostly supported by the follo
 
 #### Utilities
 * [createcomp](https://www.npmjs.com/package/createcomp) - a node script I personally coded to manage the creation of a react component along with its stylesheet and test file when working on components. This should be updated to provide delete and rename functionalities in the future.
-   
-
-## Contribute
 
   
 ## Maintainer 
