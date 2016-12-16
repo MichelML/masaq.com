@@ -8,8 +8,8 @@
 
 <a href="#synopsis">Synopsis</a><br>
 <a href="#strategy">Strategy</a><br>
--<a href="#core-strategy">core strategy</a><br>
--<a href="#using-react">on using React</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#core-strategy">core strategy</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#using-react">on using React</a><br>
 <a href="#installation">Installation</a><br>
 <a href="#development">Development</a><br>
 <a href="#documentation">Documentation</a><br>
@@ -18,11 +18,9 @@
 
 
 <h1 id="synopsis">Synopsis</h1>
-[maSAQ.com](https://michelml.github.io/masaq.com/build/) is a prototype search interface to ease product discovery for all SAQ's clients, using the Coveo REST API. This project originated from a technical challenge which was part of the front-end developer interview process at Coveo.
+[maSAQ.com](https://michelml.github.io/masaq.com/build/) is a prototype search interface to ease product discovery for all SAQ's clients, using the Coveo REST API. This project originated from a technical challenge which was part of the front-end developer interview process at [Coveo](http://coveo.com).
 
-The challenge has been accepted.
-
-There is only a french version for now.
+The challenge has been accepted, and there is only a french version for now.
                        
 <h1 id="strategy">Strategy</h1>
 
@@ -109,14 +107,43 @@ To install all the node modules dependencies for the project, run the following 
 ```
 npm install  
 ```  
-This could take a few minutes or less. You are now ready to edit the application.
+This could take a few minutes or less, and you are now ready to contribute to the application.
 
 <h1 id="development">Development</h1>
+All source files are located at `_root_/src`, excepts for assets and the _index.html_ file that are located at `_root_/public`. These files are the ones to be edited before building the production version of the app.
 
+maSAQ.com started with [create-react-app](https://github.com/facebookincubator/create-react-app), helping you start the creation of applications with React, along with automated unit tests, with very minimal configuration. 
+
+Out of the box, create-react-app comes with great technologies and pre-built scripts helping you start being productive in no time (see [create-react-app](https://github.com/facebookincubator/create-react-app) site or [development section](#development-tech) of the technology stack section). Here is an overview of each script and its function:
+
+<small>_Disclaimer: following descriptions are greatly inspired by the create-react-app documentation._</small>
+
+- `npm start`  
+	- Runs the app in development mode. Open http://localhost:3000 to view it in the browser. The page will reload if you make edits.
+You will see the build errors and lint warnings in the console.
+
+- `npm test` 
+	- Runs the test watcher in an interactive mode. By default, runs tests related to files changes since the last commit. The development environment currently comes bundled with Jest, Jasmine, and Enzyme. Read the following [creation-react-app link](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests) for more information about testing.
+	
+- `npm run build`
+	- Builds the app for production to the `_root_/build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. maSAQ.com is then ready to be deployed afterward.
+	
+Along with the React components, the application uses other modules provided in the `_root_/utils` folder to create a nice UI:
+
+- CoveoAPI (at `_root_/utils/coveo.js`)
+	- a namespace containing all utility functions and data to create proper requests to the Coveo REST API
+	
+- Hash (at `_root_/utils/hash.js`)
+	- a namespace containing all utility functions to update and parse the `window.location.hash`
+
+- SAQ
+	- a small namespace of one utility function, so far used to get the current number of products displayed in the application.
+	
+To get you started, you can view the [issues](https://github.com/MichelML/masaq.com/issues) currently remaining to be solved. You can also provide fixes for issues specified in the [on using React](#using-react) section.
 
 
 <h1 id="development">Documentation</h1>
-_coming soon_
+_more detailed documentation coming soon. Meanwhile, please see the [development](#development) section._
 
 # Technology stack    
 As of the last edit of this README, *maSAQ.com* is mostly supported by the following technologies:
@@ -129,7 +156,7 @@ As of the last edit of this README, *maSAQ.com* is mostly supported by the follo
 * [React](https://facebook.github.io/react/) - building UI components and managing data flow   
 * [jQuery](https://jquery.com/) - DOM selection, animation, and event handling       
   
-#### Development   
+<h4 id="development-tech">Development</h4>
 * [Create react app](https://github.com/facebookincubator/create-react-app) - Create React apps with no build configuration
 * [Webpack](https://webpack.github.io/docs/) with webpack-dev-server, html-webpack-plugin and style-loader - module bundler     
 * [Autoprefixer](https://github.com/postcss/autoprefixer) - Parse CSS and add vendor prefixes to rules
@@ -148,7 +175,7 @@ As of the last edit of this README, *maSAQ.com* is mostly supported by the follo
 * [Coveo API](https://developers.coveo.com/display/public/SearchREST/REST+Search+API+Home;jsessionid=1B209A1E53E98FE88DDF375C76FB6CD9) - Searching and getting relevant SAQ products
 
 #### Utilities
-* [createcomp](https://www.npmjs.com/package/createcomp) - a node script I personally coded to manage the creation of a react component along with its stylesheet and test file when working on components. This should be updated to provide delete and rename functionalities in the future.
+* [createcomp](https://www.npmjs.com/package/createcomp) - a node script I personally coded to manage the creation of a react component along with its stylesheet and test file when working on components. This should be updated to provide delete and rename functionalities in a near future. Docs will also be added.
 
   
 <h1 id="development">Maintainer</h1>
