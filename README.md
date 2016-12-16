@@ -87,7 +87,7 @@ Each component is named as presented in the schema in the project folder at `_ro
 
 <h1 id="installation">Installation</h1>
 #### Step 1: Prerequisites
-First, make sure you have the following installed on your computeR: [Node.js](https://nodejs.org/en/), [Npm](https://www.npmjs.com/), and [Git](https://git-scm.com/).   
+First, make sure you have the following installed on your computer: [Node.js](https://nodejs.org/en/), [Npm](https://www.npmjs.com/), and [Git](https://git-scm.com/).   
 
 
 #### Step 2: Clone the github repository
