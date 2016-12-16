@@ -12,9 +12,8 @@
 -<a href="#using-react">on using React</a><br>
 <a href="#installation">Installation</a><br>
 <a href="#development">Development</a><br>
-<a href="#edit">Edit application</a><br>
 <a href="#documentation">Documentation</a><br>
-<a href="#contribute">Contribute</a><br>
+<a href="#maintainer">Maintainer</a><br>
 
 
 
@@ -66,7 +65,7 @@ MaSAQ
 			SortCriteria<List>
 	
 	Aside
-		ReinitFiltersButton (currently not a component)
+		ResetFiltersButton (currently not a component)
 		FiltersForm
 			FilterCategory<List>
 				Checkbox<List>
@@ -84,7 +83,7 @@ MaSAQ
 ```
 When indicated as __currently not a component__, this means you won't find the actual component with that name in the project folder, but you will find it in its, unnamed, html format inside their parent component. The indication in the above schema means we believe this should be a component in itself, but is currently not.
 
-Each component is named as presented in the schema in the project folder at `_root_/src/components`. Each component possesses its own stylesheet with the same name at `_root_/src/styles`, and its own test file with the same name at `_root_/src/tests`. It may however be possible that the styles of parent elements may be used in their children. If you do not find a rule you want to editin the component's style, you may want to climb up the component tree to find which component is containing the rule. As a rule of thumb, some utility rules (hide, show components) can be found at the root component `MaSAQ`.
+Each component is named as presented in the schema in the project folder at `_root_/src/components`. Each component possesses its own stylesheet with the same name at `_root_/src/styles`, and its own test file with the same name at `_root_/src/tests`. It may however be possible that the styles of parent elements may be used in their children. If you do not find a rule you want to edit in the component's style, you may want to climb up the component tree to find which component is containing the rule. As a rule of thumb, some utility rules (hide, show components) can be found at the root component `MaSAQ`.
 
 <h1 id="installation">Installation</h1>
 #### Step 1: Prerequisites
@@ -114,6 +113,10 @@ This could take a few minutes or less. You are now ready to edit the application
 
 <h1 id="development">Development</h1>
 
+
+
+<h1 id="development">Documentation</h1>
+_coming soon_
 
 # Technology stack    
 As of the last edit of this README, *maSAQ.com* is mostly supported by the following technologies:
@@ -148,5 +151,6 @@ As of the last edit of this README, *maSAQ.com* is mostly supported by the follo
 * [createcomp](https://www.npmjs.com/package/createcomp) - a node script I personally coded to manage the creation of a react component along with its stylesheet and test file when working on components. This should be updated to provide delete and rename functionalities in the future.
 
   
-## Maintainer 
+<h1 id="development">Maintainer</h1>
+ 
 Michel Moreau - [michel.moreau.lapointe@gmail.com](mailto:michel.moreau.lapointe@gmail.com?Subject=GEN%20Project) 
