@@ -143,7 +143,7 @@ To get you started, you can view the [issues](https://github.com/MichelML/masaq.
 
 
 <h1 id="development">Documentation</h1>
-_more detailed documentation coming soon. Meanwhile, please see the [development](#development) section._
+_more detailed documentation coming soon. Meanwhile, please see the [strategy](#strategy), and [development](#development) section._
 
 # Technology stack    
 As of the last edit of this README, *maSAQ.com* is mostly supported by the following technologies:

@@ -56,7 +56,7 @@ CoveoAPI.postRequestBodyFrame = {
       {
          "field": "@tpcategorie",
          "maximumNumberOfValues": 200,
-         "sortCriteria": "occurences",
+         "sortCriteria": "alphaascending",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
@@ -84,28 +84,28 @@ CoveoAPI.postRequestBodyFrame = {
       {
          "field": "@tpparticularitesplitgroup",
          "maximumNumberOfValues": 24,
-         "sortCriteria": "occurences",
+         "sortCriteria": "alphaascending",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
       {
          "field": "@tppastilledegout",
          "maximumNumberOfValues": 50,
-         "sortCriteria": "occurences",
+         "sortCriteria": "alphaascending",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
       {
          "field": "@tppays",
          "maximumNumberOfValues": 50,
-         "sortCriteria": "occurences",
+         "sortCriteria": "alphaascending",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
       {
          "field": "@tpregion",
          "maximumNumberOfValues": 50,
-         "sortCriteria": "occurences",
+         "sortCriteria": "alphaascending",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
