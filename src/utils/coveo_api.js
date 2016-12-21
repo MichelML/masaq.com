@@ -112,7 +112,7 @@ CoveoAPI.postRequestBodyFrame = {
       {
          "field": "@tpmillesime",
          "maximumNumberOfValues": 100,
-         "sortCriteria": "occurences",
+         "sortCriteria": "alphadescending",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       }

@@ -19,6 +19,11 @@ class Aside extends Component {
             </button>
           </div>
           <FiltersForm groupByResults={this.props.groupByResults}/>
+          <button id="to-top-aside" className="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onClick={() => {
+            $('aside').scrollTop(0);
+          }}>
+            <i className="material-icons">keyboard_arrow_up</i>
+          </button>
         </aside>
     );
   };
