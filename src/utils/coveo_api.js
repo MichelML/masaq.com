@@ -40,7 +40,7 @@ CoveoAPI.createGroupByEntry = (field) => {
 CoveoAPI.apiURL = 'https://cloudplatform.coveo.com/rest/search';
 
 CoveoAPI.postRequestAuthorizationHeader = {
-  "Authorization": "Bearer 6318103b-f9da-437c-854b-9e6f1f44e27b"
+  "Authorization": "Bearer 058c85fd-3c79-42a3-9236-b83d35588103"
 };
 
 CoveoAPI.postRequestBodyFrame = {
