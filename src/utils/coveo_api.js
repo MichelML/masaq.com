@@ -40,7 +40,7 @@ CoveoAPI.createGroupByEntry = (field) => {
 CoveoAPI.apiURL = 'https://cloudplatform.coveo.com/rest/search';
 
 CoveoAPI.postRequestAuthorizationHeader = {
-  "Authorization": "Bearer 6318103b-f9da-437c-854b-9e6f1f44e27b"
+  "Authorization": "Bearer 058c85fd-3c79-42a3-9236-b83d35588103"
 };
 
 CoveoAPI.postRequestBodyFrame = {
@@ -56,7 +56,7 @@ CoveoAPI.postRequestBodyFrame = {
       {
          "field": "@tpcategorie",
          "maximumNumberOfValues": 200,
-         "sortCriteria": "occurences",
+         "sortCriteria": "alphaascending",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
@@ -84,35 +84,35 @@ CoveoAPI.postRequestBodyFrame = {
       {
          "field": "@tpparticularitesplitgroup",
          "maximumNumberOfValues": 24,
-         "sortCriteria": "occurences",
+         "sortCriteria": "alphaascending",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
       {
          "field": "@tppastilledegout",
          "maximumNumberOfValues": 50,
-         "sortCriteria": "occurences",
+         "sortCriteria": "alphaascending",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
       {
          "field": "@tppays",
          "maximumNumberOfValues": 50,
-         "sortCriteria": "occurences",
+         "sortCriteria": "alphaascending",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
       {
          "field": "@tpregion",
          "maximumNumberOfValues": 50,
-         "sortCriteria": "occurences",
+         "sortCriteria": "alphaascending",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       },
       {
          "field": "@tpmillesime",
          "maximumNumberOfValues": 100,
-         "sortCriteria": "occurences",
+         "sortCriteria": "alphadescending",
          "injectionDepth": 1000,
          "completeFacetWithStandardValues": true
       }

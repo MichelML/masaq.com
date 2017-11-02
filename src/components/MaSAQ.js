@@ -30,6 +30,7 @@ class MaSAQ extends Component {
       } 
 
       $('#did-you-mean').addClass('hide');
+
       $.ajax(CoveoAPI.apiURL, {
           method: 'POST',
           headers: CoveoAPI.postRequestAuthorizationHeader,
@@ -72,9 +73,13 @@ class MaSAQ extends Component {
           }
         })
     }
+
     render() {
       const updateComponentWithHash = this.updateComponent.bind(this);
+
       Hash.initListener(updateComponentWithHash);
+
+      // Initialize the app with one POST request on page load
       if (this.state.history.length === 1) {
         window.location.hash = "";
         $.ajax(CoveoAPI.apiURL, {
@@ -111,6 +116,7 @@ class MaSAQ extends Component {
       }
 
       const currentAppState = this.state.history[this.state.history.length-1];
+
       return (
         <div className="demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
           <Header/>
